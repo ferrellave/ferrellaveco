@@ -1,0 +1,33 @@
+
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}Ferre-Llave Colombia - Contacto{% endblock title %}
+
+{% block blog_content %}
+
+<section class="contacto" id="contacto">
+<h2><span><img src="/static/img/contacto.png"></span>Contacto</h2>
+<h3>Dirección:</h3>
+<div class="place">
+    <h4>Carrera 13 # 24A-16, Colombia, Bogotá.</h4>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.604468917538!2d-74.072156!3d4.611716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x333cbaa2da15d8c4!2sFerre-Llave!5e0!3m2!1ses-419!2sco!4v1560185906352!5m2!1ses-419!2sco" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div>
+</section>
+
+		 <form id="formulario" method="post" action="" enctype="multipart/form-data">
+            <h3>Realize sus cotizaciones en linea:</h3>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input required="True" placeholder="Su Email" class="form-control" id="id_correo" name="correo" type="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea required="True" placeholder="Su Mensaje" class="form-control" cols="40" id="id_mensaje" name="mensaje" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="look">Enviar</button> 
+                </form>
+
+{% endblock blog_content %}
+

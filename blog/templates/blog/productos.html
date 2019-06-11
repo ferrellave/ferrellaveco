@@ -1,0 +1,30 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}Ferre-Llave Colombia - Productos{% endblock title %}
+
+{% block blog_content %}
+<section id="productos" class="productos">
+<h2><span><img src="/static/img/productos.png"></span>Productos de calidad: Las mejores ofertas, promociones y descuentos.</h2>
+<div class="categorias">
+
+{% for categoria in categoria %}
+    <h3>{{categoria.titulo}}</h3>
+    {%for producto in producto%}
+    {%if producto.categoria.id == categoria.id%}
+    <article>
+        <figure>
+        {%if producto.foto%}<img src="/media/{{producto.foto}}">{%endif%}
+        </figure>
+        <h4>{{producto.titulo}}</h4>
+        <h5>Servicio: {{producto.categoria}}</h5><span>Categoría: Llaves para autos</span><p>{{producto.marca}}</p><strong>Cod Web: 00-0{{producto.id}}</strong>
+        <button>Ver Producto</button>
+    </article>
+    {%else%}
+    {%endif%}
+    {%endfor%}
+{%endfor%}
+
+</div>
+</section>
+
+{% endblock blog_content %}

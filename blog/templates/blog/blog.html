@@ -1,0 +1,28 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}Ferre-Llave Colombia - Blog{% endblock title %}
+
+{% block blog_content %}
+<section class="blog" id="blog">
+<h2><span><img src="/static/img/blog.png"></span>Blog: Dísfruta las mejores publicaciones relacionadas a nuestros productos y servicios</h2>
+
+{% for blog in blog%}
+<article>
+    <table>
+        <td>
+        	{%if blog.foto%}
+        	<img src="/media/{{blog.foto}}"></td>
+        	{%endif%}
+        <td>
+            <h3>{{blog.titulo}}</h3>
+            <p>{{blog.descripcion}}</p>
+            <h4>Publicaciones del Blog</h4>
+            <button src="#">Ver Blog</button>
+        </td>
+    </table>
+</article>
+{%endfor%}
+
+</section>
+
+{% endblock blog_content %}
