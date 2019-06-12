@@ -23,7 +23,7 @@ from django.utils.decorators import available_attrs, decorator_from_middleware
 def inicio(request):
 
     template = 'blog/inicio.html'
-    categoria = Categoria.objects.all().order_by('-titulo')
+    categoria = Categoria.objects.all().order_by('id')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')
@@ -33,7 +33,7 @@ def inicio(request):
 def somos(request):
 
     template = 'blog/somos.html'
-    categoria = Categoria.objects.all().order_by('-titulo')
+    categoria = Categoria.objects.all().order_by('id')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')
@@ -42,7 +42,7 @@ def somos(request):
 def productos(request):
 
     template = 'blog/productos.html'
-    categoria = Categoria.objects.all().order_by('-titulo')
+    categoria = Categoria.objects.all().order_by('id')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')
@@ -52,7 +52,7 @@ def productos(request):
 def servicios(request):
 
     template = 'blog/servicios.html'
-    categoria = Categoria.objects.all().order_by('-titulo')
+    categoria = Categoria.objects.all().order_by('id')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')
@@ -62,7 +62,7 @@ def servicios(request):
 def blog(request):
 
     template = 'blog/blog.html'
-    categoria = Categoria.objects.all().order_by('-titulo')
+    categoria = Categoria.objects.all().order_by('id')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')
@@ -70,7 +70,7 @@ def blog(request):
                                 context_instance=RequestContext(request))
 
 def contacto(request):
-    categoria = Categoria.objects.all().order_by('-titulo')
+    categoria = Categoria.objects.all().order_by('id')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')
