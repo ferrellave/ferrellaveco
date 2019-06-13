@@ -18,4 +18,25 @@
 	<p>Realiza tus cotizaciones en linea y ahorra tiempo.</p>
 	<a href="{% url 'blog.contacto'%}">Contactanos</a>
 </div>
+
+<section class="blog" id="blog">
+	<h3>Dísfruta nuestras más recientes publicaciones.</h3>
+{% for blog in blog%}
+<article>
+    <table>
+        <td>
+        	{%if blog.foto%}
+        	<img src="/media/{{blog.foto}}"></td>
+        	{%endif%}
+        <td>
+            <h3>{{blog.titulo}}</h3>
+            <p>{{blog.descripcion}}</p>
+            <h4>Publicaciones del Blog</h4>
+            <button onclick="location.href={%url 'blog.blog'%}">Ver Blog</button>
+        </td>
+    </table>
+</article>
+{%endfor%}
+
+</section>
 {% endblock blog_content %}
