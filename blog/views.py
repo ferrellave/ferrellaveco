@@ -23,7 +23,7 @@ from django.utils.decorators import available_attrs, decorator_from_middleware
 def inicio(request):
 
     template = 'blog/inicio.html'
-    categoria = Categoria.objects.all().order_by('id')
+    categoria = Categoria.objects.all().order_by('numero')
     marca = Marca.objects.all().order_by('-titulo')
     producto = Producto.objects.all().order_by('-titulo')
     blog = Blog.objects.all().order_by('-titulo')

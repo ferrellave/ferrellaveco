@@ -12,6 +12,7 @@ class Categoria(models.Model):
     titulo = models.CharField(max_length=300, verbose_name="Titulo")
     descripcion = models.TextField(blank=True, verbose_name="Descripción")
     foto = models.ImageField(upload_to='categorias', blank=True, null=True)
+    numero = models.CharField(max_length=300, verbose_name="Numero",blank=True,null=True)
     creado = models.DateTimeField(default=now, editable=False)
     modificado = models.DateTimeField(auto_now_add = False, auto_now=True, editable=False)
     slug = models.SlugField(editable=False)

@@ -1,10 +1,10 @@
 				@font-face {
     font-family: 'oswald';
-    src: url('fonts/oswald-regular/oswald-regular-webfont.eot');
-    src: url('fonts/oswald-regular/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/oswald-regular/oswald-regular-webfont.woff') format('woff'),
-         url('fonts/oswald-regular/oswald-regular-webfont.ttf') format('truetype'),
-         url('fonts/oswald-regular/oswald-regular-webfont.svg#paktregular') format('svg');
+    src: url('/static/fonts/oswald-regular/oswald-regular-webfont.eot');
+    src: url('/static/fonts/oswald-regular/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/oswald-regular/oswald-regular-webfont.woff') format('woff'),
+         url('/static/fonts/oswald-regular/oswald-regular-webfont.ttf') format('truetype'),
+         url('/static/fonts/oswald-regular/oswald-regular-webfont.svg#paktregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +13,7 @@
 	padding: 0;
 	text-decoration: none;
   	list-style: none;
-  	font-family: arial, 'oswald', sans-serif;
+  	font-family: 'oswald', sans-serif;
  	-webkit-transition: All 0.2s ease;
 	-moz-transition: All 0.2s ease;
 	-o-transition: All 0.2s ease;
@@ -27,13 +27,15 @@
 	}
 
 		html{background: #333;}
-	.banner{background: #003974;width: 100%;height: 400px;overflow: hidden;position:relative;}
-	.banner ul{width: 8000px;position:absolute;}
+	.banner{background: #4a5159;width: 100%;height: 400px;overflow: hidden;position:relative;}
+	.banner ul{width: 9000px;position:absolute;}
 	.banner div{margin: 0 auto; background: rgba(255,255,255,0.2);width: 800px;height: 400px;position: relative;}
 	.banner ul li{display: inline-block;width:800px;height:400px;background:rgba(255,255,255,0.1);opacity: 0.8;}
 	.banner ul li:hover{opacity: 1;}
-	.banner ul li a{display:block;width:100%;height:100%;overflow: hidden;text-align: center;}
+	.banner ul li a{position:relative;display:block;width:100%;height:100%;overflow: hidden;text-align: center;}
 	.banner ul li a img{width: 100%;height: 100%;}
+	.banner ul li a span{position: absolute;top: 30px;left: 0px;font-size: 30px;padding: 20px;background: rgba(0,0,0,0.8);display: inline-block;color: #fff;font-weight: bold;}
+	.banner ul li a button{font-size:12px;display:block;font-weight: bold; border:none;background:red;color: white;border-radius: 50px;margin-bottom:10px;margin-left:10px;margin-top:10px;padding: 10px 20px;}
 	.banner-ul1{left: 0px;}
 	.banner-ul2{left: 0px;}
 	.banner-ul3{left: -800px;}
@@ -46,30 +48,35 @@
 	.banner-ul10{left: -6400px;}
 	.banner-ul11{left: -7200px;}
 
+	.galery{text-align: center;background: #4a5159;padding: 10px;}
+	.galery	a{position:relative;display: inline-block;width: 70px;height: 70px; border:2px solid white; opacity: 0.7;margin: 3px; border-radius:50%;overflow: hidden;}
+	.galery a:hover{opacity:1;}
+	.galery a img{width: 100%;height: 100%;}
+	.galery a span{position: absolute;bottom: 10px;left: 0;font-size: 10px;background: rgba(0,0,0,0.5);color: white;padding: 5px;font-weight: bold;}
+
 	iframe{width: 100%;border:none;}
 	#slider{height: 400px;width:100%;}
 	.menu-button{display: none;}
-	#menu{z-index:10;background: #d42626;width: 100%;height: 60px;position:fixed;top:0;left:0;}
+	#menu{z-index:10;background: rgba(189, 0, 0, 0.9);width: 100%;height: 50px;position:fixed;top:0;left:0;}
 	#menu ul{height:100%;display: inline-block;vertical-align: top;}
 	#menu ul li{display: inline-block;vertical-align: top;background:rgba(0,0,0,0.0);height: 100%;opacity: 0.8;}
 	#menu ul li:hover{opacity: 1;}
-	#menu ul li a{display: block;height: 100%;padding: 15px 10px;font-size:14px;color: #fff; font-weight: bold;border:1px solid rgba(0,0,0,0.2);}
+	#menu ul li a{display: block;height: 100%;padding: 10px 10px;font-size:12px;color: #fff; font-weight: bold;border:1px solid rgba(0,0,0,0.2);}
 	#menu ul li a span{display: inline-block;width: 26px;}
 	#menu ul li a span img{width: 20px;}
 	#menu ul li a p{display: inline-block;}
 #logo a img{height:100%;width:auto;}
 #logo a{padding: 10px;display: block;height: 100%;}
-#redes{padding: 5px;height: 60px;position: absolute;right: 0;}
+#redes{padding: 5px;height: 50px;position: absolute;right: 0;}
 #redes a:hover{opacity:1;}
-#redes a img{height:25px;width:25px;border-radius:50%;}
-#redes a{opacity:0.8;border:1px solid rgba(255,255,255,0.5);margin:5px;border-radius:50%;width:27px;height:27px; border-radius:50%;display: inline-block;background: #fff;}
+#redes a img{height:30px;width:30px;border-radius:50%;}
+#redes a{opacity:0.8;margin:5px;border-radius:50%;width:30px;height:30px; border-radius:50%;display: inline-block;background: #fff;}
 
-.galery{text-align: center;background: #003974;padding: 10px;}
-.galery	a{display: inline-block;width: 60px;height: 60px; border:2px solid white; opacity: 0.7;margin: 3px; border-radius:50%;overflow: hidden;}
-.galery a:hover{opacity:1;}
-.galery a img{width: 100%;height: 100%;}
+.iniciop{padding: 20px;text-align: center;background: red;color: #fff;font-size: 22px;}
+.iniciop a{display: inline-block;padding: 20px;background: black;color: white;margin-top: 30px;border-radius: 50px;}
+
 section{background: #fbebebe6;padding: 20px;}
-section h2{padding: 60px;font-size: 30px;background:#d42626;color: white;}
+section h2{padding: 50px;font-size: 30px;background:#d42626;color: white;}
 section h2 span{display: inline-block;width: 40px;}
 section h2 span img{width: 30px;}
 .somos div{display: inline-block; line-height: 1.5;padding: 10px;padding-left:120px;background: white url(/static/img/logo.png)no-repeat left 5px top 5px;background-size:100px;border-radius: 5px;}
@@ -91,7 +98,7 @@ section h2 span img{width: 30px;}
 .productos article button{font-size:12px;display:block;font-weight: bold; border:none;background:#1ccf7d;color: white;border-radius: 50px;margin-bottom:10px;margin-left:10px;padding: 10px 20px;}
 
 
-footer{background: #d42626;text-align: center;padding: 20px;}
+footer{background: #150000;text-align: center;padding: 20px;}
 footer a{font-size:14px;padding: 5px;color: #fff;display: block;}
 footer a:hover{background: rgba(0,0,0,0.3)}
 footer strong{padding: 10px;color: #fff;display: block;}
@@ -100,39 +107,45 @@ footer table{background: rgba(0,0,0,0.2);width: 100%;margin-bottom: 20px;vertica
 footer table td{vertical-align: top;}
 .playstore{background: url(/static/img/playstore.png)no-repeat center center;background-size: 200px;display: block;margin: 10px auto;width: 200px;height: 100px;}
 .playstore:hover{background: url(/static/img/playstore.png)no-repeat center center;background-size: 220px;}
+
+#redesf a:hover{opacity:1;}
+#redesf a img{height:30px;width:30px;}
+#redesf a{padding:0px;opacity:0.8;margin:5px;border-radius:50%;width:30px;height:30px;display: inline-block;}
+
+
 .border{border-radius: 3px;overflow: hidden;}
-.container{padding: 20px;background: #f3e5e5;overflow: hidden;}
-.top{height: 60px;background: #d42626 url(/static/img/ferrellave.png)no-repeat center center;background-size:80%;}
+.container{padding: 20px;background: #2d2c2c;overflow: hidden;}
+.top{height: 50px;background: #d42626 url(/static/img/ferrellave.png)no-repeat center center;background-size:80%;}
 .top1{height: 0px;}
 
 .contacto h3{padding: 10px; color: #ff6f00;border-bottom:3px solid #ff6f00;margin: 5px;}
 .contacto h4{background:url(/static/img/maps.png)no-repeat left top;background-size: 30px;padding:10px;padding-left: 35px;}
 .map{width: 100%;height: 300px;background: white;}
-form{background: #003974;text-align: center;padding: 20px;}
+form{background: #4a5159;text-align: center;padding: 20px;}
                     form h3{padding: 10px; color:#fff;}
                     form input{width: 300px;padding: 10px;margin:5px;}
                     form textarea{width: 300px;padding: 10px;margin:5px;}
                     form button{font-size:16px;display:block;font-weight: bold; border:none;background:red;color: white;border-radius: 50px;margin-bottom:10px;margin:20px auto;padding: 10px 20px;}
 
-.descarga{background:#003974;padding: 40px 20px;text-align: center;}
+.descarga{background:#000;padding: 40px 20px;text-align: center;}
 .descarga a{font-weight:bold;padding: 20px 30px;color: #fff;background: rgba(0,0,0,0.1) url(/static/img/descarga.png)no-repeat left 10px top 10px;background-size:40px;font-size: 18px;border-radius: 8px;display: inline-block;padding-left: 55px;border:2px solid white;}
-.descarga a:hover{border:2px solid green;}
+.descarga a:hover{border:2px solid red;}
 
 .blog{padding: 10px;}
 .blog article{background: white;margin: 5px;}
 .blog article img{width: 300px;}
 .blog article h3{padding: 10px;font-size: 14px;}
 .blog article p{padding: 10px; line-height:1.5;font-size: 12px;}
-.blog article button{font-size:12px;display:block;font-weight: bold; border:none;background:#003974;color: white;border-radius: 50px;margin-bottom:10px;margin-left:10px;padding: 10px 20px;}
-.blog article h4{color: #003974;font-size: 10px;padding: 10px;}
+.blog article button{font-size:12px;display:block;font-weight: bold; border:none;background:#4a5159;color: white;border-radius: 50px;margin-bottom:10px;margin-left:10px;padding: 10px 20px;}
+.blog article h4{color: #4a5159;font-size: 10px;padding: 10px;}
 
 
 @media screen and (max-width:833px){
 
-				.banner{background: #003974;width: 100%;height: 200px;overflow: hidden;position:relative;}
+				.banner{background: #4a5159;width: 100%;height: 200px;overflow: hidden;position:relative;}
 	.banner ul{width: 2000px;position:absolute;}
 	.banner div{margin: 0 auto; background: rgba(255,255,255,0.2);width: 200px;height: 200px;position: relative;}
-	.banner ul li{display: inline-block;width:200px;height:200px;background:rgba(255,255,255,0.1);opacity: 0.8;}
+	.banner ul li{margin:-2px;display: inline-block;width:200px;height:200px;background:rgba(255,255,255,0.1);opacity: 0.8;}
 	.banner ul li:hover{opacity: 1;}
 	.banner ul li a{display:block;width:100%;height:100%;overflow: hidden;text-align: center;}
 	.banner ul li a img{width: 100%;height: 100%;}
@@ -152,9 +165,9 @@ footer table td{display:block;width: 100%;}
 .menu{position: relative;height: auto;display: none;}
 .menu1{position: relative!important;height: auto!important;display: block;background: #d42626;}
 #menu ul{height: auto;}
-#menu ul li{width: 100%;height:60px;background: rgba(0,0,0,0.1);}
-.menu-button{z-index:11;border-radius:50%;display: block;position: fixed;right: 7px;bottom: 5px;width: 60px;height: 60px;background: #ff0000b3 url(/static/img/menu.png)no-repeat center center;background-size:30px; border:3px solid rgba(0,0,0,0.3);}
-.menu-button1{z-index:11;border-radius:50%;display: block;position: fixed;right: 7px;bottom: 5px;width: 60px;height: 60px;background: #ff0000b3 url(/static/img/close.png)no-repeat center center;background-size:30px; border:3px solid rgba(0,0,0,0.3);}
+#menu ul li{width: 100%;height:50px;background: rgba(0,0,0,0.1);}
+.menu-button{z-index:11;border-radius:50%;display: block;position: fixed;right: 7px;bottom: 5px;width: 70px;height: 70px;background: #ff0000b3 url(/static/img/menu.png)no-repeat center center;background-size:30px; border:3px solid rgba(0,0,0,0.3);}
+.menu-button1{z-index:11;border-radius:50%;display: block;position: fixed;right: 7px;bottom: 5px;width: 70px;height: 70px;background: #ff0000b3 url(/static/img/close.png)no-repeat center center;background-size:30px; border:3px solid rgba(0,0,0,0.3);}
 #redes{position: relative;}
 #logo a{height: auto;width: 100%;}
 #logo a img{height: auto;width: 100%;}
@@ -164,12 +177,12 @@ footer table td{display:block;width: 100%;}
 .somos div{display: inline-block; line-height: 1.5;padding: 10px;padding-top:100px;background: white url(/static/img/logo.png)no-repeat left 5px top 5px;background-size:100px;border-radius: 5px;text-align: center;}
 .somos article{width: 100%;text-align: center;}
 .productos article figure{width: 100%;height: auto;overflow: hidden;}
-section h2{padding: 20px;font-size: 20px;background: #d42626;color: white;}
+section h2{padding: 20px;font-size: 20px;background: #810000;color: white;}
 .blog article img{width: 100%;}
 .blog article td{width: 100%;display: block;}
 .blog article table{width: 100%;}
 
-form{background: #003974;text-align: center;padding: 10px;}
+form{background: #4a5159;text-align: center;padding: 10px;}
                     form h3{padding: 10px; color:#fff;}
                     form input{width: 100%;padding: 10px;margin:5px;}
                     form textarea{width: 100%;padding: 10px;margin:5px;}
