@@ -58,7 +58,7 @@ WSGI_APPLICATION = 'ferrellave.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ferrellaves',
+        'NAME': 'ferrellaveco',
         'USER': 'root',
         'PASSWORD': '4258237',
         'HOST': 'localhost',
