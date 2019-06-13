@@ -8,7 +8,7 @@
 <div class="categorias">
 
 {% for categoria in categoria %}
-    <h3>{{categoria.titulo}}</h3>
+ <!--   <h3>{{categoria.titulo}}</h3> -->
     {%for producto in producto%}
     {%if producto.categoria.id == categoria.id%}
     <article>

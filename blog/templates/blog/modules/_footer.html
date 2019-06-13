@@ -1,8 +1,28 @@
 <section class="descarga">
     <a target="_blank" href="/static/img/ferrellave.pdf">Descarga nuestra presentación en PDF</a>
 </section>
+<div class="phonef">
+    <img src="/static/img/whatsapp.png"><p>Llámanos: (+57-1 3054814058).</p><img src="/static/img/google.png"><p>Escríbenos: ferrellave1a@gmail.com.</p><img src="/static/img/maps.png"><p>Carrera 13 # 24A-16, Colombia, Bogotá.</p>
+</div>
+<div class="place">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.604468917538!2d-74.072156!3d4.611716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x333cbaa2da15d8c4!2sFerre-Llave!5e0!3m2!1ses-419!2sco!4v1560185906352!5m2!1ses-419!2sco" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div>
 <footer>
     <table>
+            <td>
+    <ul>
+        <li><strong>© 2019 Ferrellave.co</strong></li>
+        <li><a href="{% url 'blog.inicio' %}">Inicio</a></li>
+        <li><a href="{% url 'blog.somos' %}">Quienes Somos</a></li>
+        <li><a href="{% url 'blog.servicios' %}">Servicios</a></li>
+        <li><a href="{% url 'blog.productos' %}">Productos</a></li>
+        <li><a href="{% url 'blog.blog' %}">Blog</a></li>
+        <li><a href="{% url 'blog.contacto' %}">Contacto</a></li>
+        <li><a href="http://www.ferrellave.co/login">Acceso</a></li>
+    </ul>
+    </td>
     <td>
         <ul>
             <li><strong>Horarios de Atención:</strong></li>
@@ -15,25 +35,6 @@
             <li><a>Domingo: Cerrado</a></li>
         </ul>
     </td>
-    <td>
-    <ul>
-        <li><strong>Ferre-Llave:</strong></li>
-        <li><a href="{% url 'blog.inicio' %}">Inicio</a></li>
-        <li><a href="{% url 'blog.somos' %}">Quienes Somos</a></li>
-        <li><a href="{% url 'blog.servicios' %}">Servicios</a></li>
-        <li><a href="{% url 'blog.productos' %}">Productos</a></li>
-        <li><a href="{% url 'blog.blog' %}">Blog</a></li>
-        <li><a href="{% url 'blog.contacto' %}">Contacto</a></li>
-        <li><a href="{% url 'blog.inicio' %}/login">Acceso</a></li>
-        <li><strong>Dirección:</strong></li>
-        <li><a>Carrera 13 # 24A-16, Colombia, Bogotá.</a></li>
-        <li><strong>Télefonos:</strong></li>
-        <li><a>243 3486 - 305 481 4058</a></li>
-        <li><strong>Email:</strong></li>
-        <li><a>ferrellave1a@gmail.com</a></li>
-    </ul>
-    </td>
-
         <td>
     <ul>
         <li><strong>Servicios:</strong></li>
@@ -41,15 +42,6 @@
         <li><a href="#">{{categoria.titulo}}</a></li>
         {%endfor%}
 
-    </ul>
-    </td>
-
-        <td>
-    <ul>
-        <li><strong>Productos:</strong></li>
-        {% for producto in producto%}
-        <li><a href="#">{{producto.titulo}}</a></li>
-        {%endfor%}
     </ul>
     </td>
 
