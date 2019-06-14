@@ -7,13 +7,6 @@
 
 <section class="contacto" id="contacto">
 <h2><span><img src="/static/img/contacto.png"></span>Contacto</h2>
-<h3>Dirección:</h3>
-<div class="place">
-    <h4>Carrera 13 # 24A-16, Colombia, Bogotá.</h4>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.604468917538!2d-74.072156!3d4.611716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x333cbaa2da15d8c4!2sFerre-Llave!5e0!3m2!1ses-419!2sco!4v1560185906352!5m2!1ses-419!2sco" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-</div>
 </section>
 
 		 <form id="formulario" method="post" action="" enctype="multipart/form-data">
@@ -28,6 +21,10 @@
                     </div>
                     <button type="submit" class="look">Enviar</button> 
                 </form>
+
+<a href="{%url 'blog.productos'%}">
+<img width="100%" src="/static/img/materiales.jpg">
+</a>
 
 {% endblock blog_content %}
 

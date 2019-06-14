@@ -16,6 +16,6 @@
 
 <div class="galery">
 	{%for categoria in categoria%}
-	<a href="#" onclick="banner{{categoria.numero}}()"><img src="/media/{{categoria.foto}}"><span>{{categoria.titulo}}</span></a>
+	<a onclick="banner{{categoria.numero}}()"><img src="/media/{{categoria.foto}}"><span>{{categoria.titulo}}</span></a>
 	{%endfor%}
 </div>

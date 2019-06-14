@@ -105,7 +105,8 @@ section h2 span img{width: 30px;}
 .productos article span{font-size: 10px;padding-left: 10px;}
 .productos article strong{font-size: 8px;padding-left: 10px;opacity: 0.5;}
 .productos article button{font-size:12px;display:block;font-weight: bold; border:none;background:#1ccf7d;color: white;border-radius: 50px;margin-bottom:10px;margin-left:10px;padding: 10px 20px;}
-
+.hey h5{padding: 30px;background: black;color: #fff;font-size: 30px;}
+.hey h5 img{width: 30px;}
 
 footer{background: #150000;text-align: center;padding: 20px;}
 footer a{font-size:14px;padding: 5px;color: #fff;display: block;}
