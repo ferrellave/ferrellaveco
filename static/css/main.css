@@ -94,9 +94,9 @@ section h2 span img{width: 30px;}
 .somos article img{border-radius: 50%;border:5px solid rgba(0,0,0,0.2);width: 170px;height: 170px;}
 
 .productos{}
-.productos h3{padding: 10px; color: #ff6f00;border-bottom:3px solid #ff6f00;margin: 5px;}
-.productos article{margin: 1px;background: white;display: inline-block;vertical-align: top;}
-.productos article figure{width: 200px;height: auto;overflow: hidden;}
+.productos h3{padding: 10px; color: #ff6f00;border-bottom:3px solid #ff6f00;margin: 5px;border-radius:5px;}
+.productos article{margin: 5px 3px;background: white;display: inline-block;vertical-align: top;padding: 10px;width: 240px;}
+.productos article figure{width: 220px;height: 220px;overflow: hidden;border:1px solid red;}
 .productos article figure img{width: 100%;height: auto;}
 .productos article h4{padding: 10px;}
 .productos article h5{font-size: 10px;padding-left: 10px;color:#ff6f00}

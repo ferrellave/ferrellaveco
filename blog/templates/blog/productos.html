@@ -8,7 +8,7 @@
 <div class="categorias">
 
 {% for categoria in categoria %}
- <!--   <h3>{{categoria.titulo}}</h3> -->
+  <h3 id="cat{{categoria.id}}">{{categoria.titulo}}</h3>
     {%for producto in producto%}
     {%if producto.categoria.id == categoria.id%}
     <article>
@@ -16,7 +16,7 @@
         {%if producto.foto%}<img src="/media/{{producto.foto}}">{%endif%}
         </figure>
         <h4>{{producto.titulo}}</h4>
-        <h5>Servicio: {{producto.categoria}}</h5><span>Categoría: Llaves para autos</span><p>{{producto.marca}}</p><strong>Cod Web: 00-0{{producto.id}}</strong>
+        <h5>Servicio: {{producto.categoria}}</h5>
  <!--       <button>Ver Producto</button> -->
     </article>
     {%else%}
